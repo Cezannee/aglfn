@@ -71,7 +71,7 @@
                   </h3>
                   <h1 class="home__title">Agil Friansyah</h1>
 
-                  <h3 class="home__education">Front-end Devloper</h3>
+                  <h3 class="home__education">Junior Front-end Devloper</h3>
 
                   <p class="home__description">
                      
@@ -82,6 +82,9 @@
                <div class="home__social">
                   <a href="www.linkedin.com/in/agilfn05" target="blank" class="home__social-link">
                      <i class="ri-linkedin-box-line"></i>
+                  </a>
+                  <a href="https://wa.me/+6285157552886" target="blank" class="home__social-link">
+                     <i class="ri-whatsapp-line"></i>  
                   </a>
 
 
@@ -342,13 +345,15 @@
             </h2>
 
             <div class="contact__container container grid">
-               <form action="" class="contact__form" id="contact-form">
+               <form action="?" method="POST" class="contact__form" id="contact-form">
                   <div class="contact__group">
                      <input type="text" name="user_name" required placeholder="Enter your name" class="contact__input">
-                     <input type="email" name="user_emai" required placeholder="Enter your email" class="contact__input">
+                     <input type="email" name="user_email" required placeholder="Enter your email" class="contact__input">
                   </div>
                   <textarea name="user_project" required placeholder="Enter your message" class="contact__input"></textarea>
                   <p class="contact__message" id="contact-message"></p>
+                  <div class="g-recaptcha" data-sitekey="6LfyOCsqAAAAAPO0ud3GG53nrOxBShXkVthjLjD5"></div>
+                  <br/>
                   <button type="submit" class="button contact__button"> Send Message</button>
                </form>
             </div>
@@ -363,7 +368,7 @@
                   Agil <span>Friansyah</span>
                </h1>
             <h2 class="footer__education">
-               Front-end Developer
+              Junior Front-end Developer
             </h2>
             </div>
             <div class="footer__social">
@@ -380,7 +385,7 @@
                </a>
             </div>
             <span class="footer__copy">
-               Powered by Bedimcode
+               &#169; AGLFN. All rights reserved
             </span>
          </div>
       </footer>
@@ -399,5 +404,8 @@
 
       <!--=============== MAIN JS ===============-->
       <script src="assets/js/main.js"></script>
+
+      <!--Captcha-->
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    </body>
 </html>
