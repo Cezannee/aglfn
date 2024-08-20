@@ -41,18 +41,34 @@ const contactForm = document.getElementById('contact-form');
 const contactMessage = document.getElementById('contact-message');
 
 const sendEmail = (e) => {
-    e.preventDefault(); // Corrected from "preventDeafault"
+    e.preventDefault(); // Prevent the form from submitting normally
     
     // service ID - Template ID - #form - publickey
     emailjs.sendForm('service_1bi62hw', 'template_3uqt59z', '#contact-form', 'sgePKmZS0MU29l8jU')
     .then(() => {
-        contactMessage.textContent = 'Message sent successfully'; // Corrected "sucessfully" to "successfully"
+        // Set the success message
+        contactMessage.textContent = 'Message sent successfully';
+        
+        // Make the message visible (in case it was hidden before)
+        contactMessage.style.display = 'block';
+
+        // Hide the message after 5 seconds (5000 ms)
+        setTimeout(() => {
+            contactMessage.style.display = 'none';
+        }, 5000);
     }, () => {
-        contactMessage.textContent = 'Message not sent (service error)'; // Corrected "send" to "sent"
+        // Set the error message
+        contactMessage.textContent = 'Message not sent (complete the captcha test)';
+        
+        // Make the error message visible (in case it was hidden before)
+        contactMessage.style.display = 'block';
     });
 };
 
+// Add the event listener for form submission
 contactForm.addEventListener('submit', sendEmail);
+
+
 
 
 /*=============== SHOW SCROLL UP ===============*/ 
